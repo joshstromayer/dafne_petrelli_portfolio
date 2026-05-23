@@ -1,1 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dafne Petrelli — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
 
+  <!-- ── MINDMAP LAYER (Layer 0 + Layer 1) ── -->
+  <div id="mindmap-screen" class="screen active">
+
+    <!-- Breadcrumb -->
+    <div id="breadcrumb" class="breadcrumb hidden">
+      <button id="breadcrumb-back" class="breadcrumb-btn">
+        <span class="breadcrumb-arrow">←</span>
+        <span id="breadcrumb-label">Back</span>
+      </button>
+    </div>
+
+    <!-- Hero text (Layer 0 only) -->
+    <div id="hero-text" class="hero-text">
+      <p class="hero-eyebrow">Physics MPhil · Cambridge</p>
+      <h1 class="hero-name">Dafne<br /><em>Petrelli</em></h1>
+      <!-- <p class="hero-tagline">Exploring the universe,<br/>one dataset at a time.</p> -->
+    </div>
+
+    <!-- The canvas where D3 draws the mindmap -->
+    <svg id="mindmap-svg"></svg>
+
+    <!-- Instruction hint -->
+    <p id="map-hint" class="map-hint">Click a node to explore</p>
+  </div>
+
+  <!-- ── CONTENT LAYER (Layer 2) ── -->
+  <div id="content-screen" class="screen">
+
+    <!-- Back button -->
+    <button id="content-back" class="content-back-btn">
+      <span>←</span> <span id="content-back-label">Back</span>
+    </button>
+
+    <!-- Section title -->
+    <div class="content-header">
+      <p id="content-eyebrow" class="content-eyebrow"></p>
+      <h2 id="content-title" class="content-title"></h2>
+      <p id="content-subtitle" class="content-subtitle"></p>
+    </div>
+
+    <!-- Card grid -->
+    <div id="content-grid" class="content-grid"></div>
+
+  </div>
+
+  <!-- D3 from CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
